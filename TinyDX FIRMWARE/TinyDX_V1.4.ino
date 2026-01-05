@@ -144,7 +144,7 @@ void loop()
   //--------------------------- LIMIT OUT OF OPERATION BANDS TO ONLY RX -----------------
   freqdiv = freq / 1000000;
   if (freqdiv < 11 || freqdiv > 30) {
-          goto RX1; // Skip TX Loop
+    goto RX1; // Skip TX Loop
   }  
 
   // --------------------------- FSK  TX LOOP -----------------------------------
@@ -273,30 +273,30 @@ void loop()
     }
   }
 
-  RX1:
-    si5351.output_enable(SI5351_CLK0, 0);   //TX off
-    digitalWrite(TX,0);
-    digitalWrite(TXSW,0);
-    freq4 = freq * 4;
-    freqdiv = freq / 1000000;
-    if (freqdiv <= 25) {
-      si5351.set_freq(freq4*100ULL, SI5351_CLK1);
-      si5351.output_enable(SI5351_CLK1, 1);   //RX on
-    }
+RX1:
+  si5351.output_enable(SI5351_CLK0, 0);   //TX off
+  digitalWrite(TX,0);
+  digitalWrite(TXSW,0);
+  freq4 = freq * 4;
+  freqdiv = freq / 1000000;
+  if (freqdiv <= 25) {
+    si5351.set_freq(freq4*100ULL, SI5351_CLK1);
+    si5351.output_enable(SI5351_CLK1, 1);   //RX on
+  }
 
-    if (freqdiv > 25 && freqdiv < 30) {
-      // Set CLK1 to output 112 MHz
-      si5351.set_ms_source(SI5351_CLK1, SI5351_PLLB);
-      si5351.set_freq_manual(freq4*100ULL, 70000000000ULL, SI5351_CLK1);
-      si5351.output_enable(SI5351_CLK1, 1);   //RX on
-    }
-    /*
-    Serial.println(freq);
-    Serial.println(freq4); 
-      */
-    TX_State = 0;
-    digitalWrite(RX,HIGH);
-    FSKtx = 0;
+  if (freqdiv > 25 && freqdiv < 30) {
+    // Set CLK1 to output 112 MHz
+    si5351.set_ms_source(SI5351_CLK1, SI5351_PLLB);
+    si5351.set_freq_manual(freq4*100ULL, 70000000000ULL, SI5351_CLK1);
+    si5351.output_enable(SI5351_CLK1, 1);   //RX on
+  }
+  /*
+  Serial.println(freq);
+  Serial.println(freq4); 
+    */
+  TX_State = 0;
+  digitalWrite(RX,HIGH);
+  FSKtx = 0;
 }
 //*********************[ END OF MAIN LOOP FUNCTION ]*************************
 
