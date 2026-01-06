@@ -18,8 +18,14 @@ jobs:
       - name: Compile sketch
         uses: arduino/compile-sketches@v1
         with:
+          enable-deltas-report: true
           sketch-paths: |
             - "TinyDX FIRMWARE"
           libraries: |
             # The "blink" sketch being compiled in this demo doesn't use any libraries, so just use an empty list
             - name: "Etherkit Si5351"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sketches-reports
+          path: sketches-reports
