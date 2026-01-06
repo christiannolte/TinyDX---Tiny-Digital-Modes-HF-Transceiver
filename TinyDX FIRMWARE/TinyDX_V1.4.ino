@@ -273,6 +273,10 @@ RX1:
     si5351.set_freq_manual(freq4*100ULL, 70000000000ULL, SI5351_CLK1);
     si5351.output_enable(SI5351_CLK1, 1);   //RX on
   }
+  /*
+  Serial.println(freq);
+  Serial.println(freq4); 
+  */
   TX_State = 0;
   digitalWrite(RX,HIGH);
   FSKtx = 0;
