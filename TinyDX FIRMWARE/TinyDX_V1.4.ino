@@ -123,8 +123,6 @@ void setup()
 //***************************[ Main LOOP Function ]**************************
 void loop()
 {  
-
-
   Band_Select();
   //--------------------------- LIMIT OUT OF OPERATION BANDS TO ONLY RX -----------------
   freqdiv = freq / 1000000;
@@ -335,7 +333,6 @@ void SW_assign() {
   Freq_assign();
   B2_FT8 = F_FT8;
   B2_FT4 = F_FT4;
-
 }
 
 //*********************[ Band dependent Frequency Assign Function ]********************
