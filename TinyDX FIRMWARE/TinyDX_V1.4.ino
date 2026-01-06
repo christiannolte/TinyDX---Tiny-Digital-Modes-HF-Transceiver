@@ -126,19 +126,6 @@ void loop()
   int FSK = 1;
   int FSKtx = 0;
 
-  int Nsignal;
-  int Ncycle01;
-  int Ncycle12;
-  int Ncycle23;
-  int Ncycle34;
-  unsigned int d1=1,d2=2,d3=3,d4=4;
-
-  unsigned long codefreq1;
-  unsigned long codefreq2;
-  unsigned long codefreq3;
-  unsigned long codefreq;
-
-
 
   Band_Select();
   //--------------------------- LIMIT OUT OF OPERATION BANDS TO ONLY RX -----------------
@@ -154,12 +141,12 @@ void loop()
     
 
   while (FSK>0) {
-    Nsignal = 10;
-    Ncycle01 = 0;
-    Ncycle12 = 0;
-    Ncycle23 = 0;
-    Ncycle34 = 0;
-    d1=1,d2=2,d3=3,d4=4;
+    int Nsignal = 10;
+    int Ncycle01 = 0;
+    int Ncycle12 = 0;
+    int Ncycle23 = 0;
+    int Ncycle34 = 0;
+    unsigned int d1=1,d2=2,d3=3,d4=4;
     
     TCNT1 = 0;  
     
@@ -245,10 +232,10 @@ void loop()
     } 
     d4 = ICR1;
 
-    codefreq1 = 1600000000/(65536*Ncycle12+d2-d1);
-    codefreq2 = 1600000000/(65536*Ncycle23+d3-d2);
-    codefreq3 = 1600000000/(65536*Ncycle34+d4-d3);
-    codefreq = (codefreq1 + codefreq2 + codefreq3)/3;
+    unsigned long codefreq1 = 1600000000/(65536*Ncycle12+d2-d1);
+    unsigned long codefreq2 = 1600000000/(65536*Ncycle23+d3-d2);
+    unsigned long codefreq3 = 1600000000/(65536*Ncycle34+d4-d3);
+    unsigned long codefreq = (codefreq1 + codefreq2 + codefreq3)/3;
 
     if (d3==d4) {
       codefreq = 5000;     
@@ -264,9 +251,7 @@ void loop()
         si5351.output_enable(SI5351_CLK1, 0);   //RX off
         si5351.output_enable(SI5351_CLK0, 1);   // TX on
       }
-      
       si5351.set_freq((freq * 100 + codefreq), SI5351_CLK0);    
-          
       FSKtx = 1;
     } else {
     FSK--;
@@ -290,10 +275,6 @@ RX1:
     si5351.set_freq_manual(freq4*100ULL, 70000000000ULL, SI5351_CLK1);
     si5351.output_enable(SI5351_CLK1, 1);   //RX on
   }
-  /*
-  Serial.println(freq);
-  Serial.println(freq4); 
-    */
   TX_State = 0;
   digitalWrite(RX,HIGH);
   FSKtx = 0;
@@ -305,39 +286,39 @@ RX1:
 //********************************************************************************
 
 void Band_Select() {
-M = digitalRead(M_SW);
-B = digitalRead(B_SW);
+  M = digitalRead(M_SW);
+  B = digitalRead(B_SW);
 
-if ((B == LOW)&&(M == LOW)) {
-  delay(100); 
-  if ((B == LOW)&&(M == LOW)) 
-  {
-    freq = B1_FT8;   
+  if ((B == LOW)&&(M == LOW)) {
+    delay(100); 
+    if ((B == LOW)&&(M == LOW)) 
+    {
+      freq = B1_FT8;   
+    }
   }
-}
 
-if ((B == LOW)&&(M == HIGH)) {
-  delay(100); 
-  if ((B == LOW)&&(M == HIGH)) 
-  {
-    freq = B1_FT4;   
+  if ((B == LOW)&&(M == HIGH)) {
+    delay(100); 
+    if ((B == LOW)&&(M == HIGH)) 
+    {
+      freq = B1_FT4;   
+    }
   }
-}
 
-if ((B == HIGH)&&(M == LOW)) {
-  delay(100); 
-  if ((B == HIGH)&&(M == LOW)) 
-  {
-    freq = B2_FT8;   
+  if ((B == HIGH)&&(M == LOW)) {
+    delay(100); 
+    if ((B == HIGH)&&(M == LOW)) 
+    {
+      freq = B2_FT8;   
+    }
   }
-}
 
-if ((B == HIGH)&&(M == HIGH)) {
-   delay(100); 
-   if ((B == HIGH)&&(M == HIGH)) 
-   {
-     freq = B2_FT4;   
-   }
+  if ((B == HIGH)&&(M == HIGH)) {
+    delay(100); 
+    if ((B == HIGH)&&(M == HIGH)) 
+    {
+      freq = B2_FT4;   
+    }
   }
 }
 
