@@ -23,7 +23,3 @@ jobs:
           libraries: |
             # The "blink" sketch being compiled in this demo doesn't use any libraries, so just use an empty list
             - name: "Etherkit Si5351"
-  report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: arduino/report-size-deltas@v1
