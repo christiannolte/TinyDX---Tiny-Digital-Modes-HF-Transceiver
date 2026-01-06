@@ -102,7 +102,7 @@ void setup()
   SW_assign();  
                                 
   //------------------------------- SET SI5351 VFO -----------------------------------  
-    // The crystal load value needs to match in order to have an accurate calibration
+  // The crystal load value needs to match in order to have an accurate calibration
   si5351.init(SI5351_CRYSTAL_LOAD_8PF, ReferenceFrequency, 0); //initialize the VFO
   si5351.set_correction(cal_factor, SI5351_PLL_INPUT_XO);
   si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
@@ -123,8 +123,6 @@ void setup()
 //***************************[ Main LOOP Function ]**************************
 void loop()
 {  
-  int FSK = 1;
-  int FSKtx = 0;
 
 
   Band_Select();
@@ -138,7 +136,9 @@ void loop()
   // The following code is from JE1RAV https://github.com/je1rav/QP-7C
     //(Using 3 cycles for timer sampling to improve the precision of frequency measurements)
     //(Against overflow in low frequency measurements)
-    
+
+  int FSK = 1;
+  int FSKtx = 0;
 
   while (FSK>0) {
     int Nsignal = 10;
