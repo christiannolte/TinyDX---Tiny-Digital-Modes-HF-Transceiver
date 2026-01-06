@@ -113,7 +113,7 @@ void setup()
   TCCR1B = 0x01; // Timer1 Timer 16 MHz
   TCCR1B = 0x81; // Timer1 Input Capture Noise Canceller
   ACSR |= (1<<ACIC);  // Analog Comparator Capture Input
-    
+  
   pinMode(7, INPUT); //PD7 = AN1 = HiZ, PD6 = AN0 = 0
   digitalWrite(RX,LOW);   
 }
@@ -132,8 +132,8 @@ void loop()
 
   // --------------------------- FSK  TX LOOP -----------------------------------
   // The following code is from JE1RAV https://github.com/je1rav/QP-7C
-    //(Using 3 cycles for timer sampling to improve the precision of frequency measurements)
-    //(Against overflow in low frequency measurements)
+  //(Using 3 cycles for timer sampling to improve the precision of frequency measurements)
+  //(Against overflow in low frequency measurements)
 
   int FSK = 1;
   int FSKtx = 0;
