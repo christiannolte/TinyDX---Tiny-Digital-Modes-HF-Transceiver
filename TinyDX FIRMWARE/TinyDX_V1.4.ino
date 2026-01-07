@@ -308,43 +308,24 @@ if (freqdiv > 25 && freqdiv < 30){
 //********************************************************************************
 
 void Band_Select(){
-M = digitalRead(M_SW);
-B = digitalRead(B_SW);
+  M = digitalRead(M_SW);
+  B = digitalRead(B_SW);
 
-if ((B == LOW)&&(M == LOW)) {
-   delay(100); 
-if ((B == LOW)&&(M == LOW)) 
- {
- freq = B1_FT8;   
+  if ((B == LOW)&&(M == LOW)) {
+    freq = B1_FT8;   
   }
-}
 
-
-if ((B == LOW)&&(M == HIGH)) {
-   delay(100); 
-if ((B == LOW)&&(M == HIGH)) 
- {
- freq = B1_FT4;   
+  if ((B == LOW)&&(M == HIGH)) {
+    freq = B1_FT4;   
   }
-}
 
-
-if ((B == HIGH)&&(M == LOW)) {
-   delay(100); 
-if ((B == HIGH)&&(M == LOW)) 
- {
- freq = B2_FT8;   
+  if ((B == HIGH)&&(M == LOW)) {
+    freq = B2_FT8;   
   }
-}
 
-
-if ((B == HIGH)&&(M == HIGH)) {
-   delay(100); 
-if ((B == HIGH)&&(M == HIGH)) 
- {
- freq = B2_FT4;   
+  if ((B == HIGH)&&(M == HIGH)) {
+   freq = B2_FT4;   
   }
-}
 }
 
 
@@ -392,3 +373,4 @@ void Freq_assign() {
   }
 }
 //************************[ End of Frequency assign function ]*************************
+
