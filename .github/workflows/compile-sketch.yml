@@ -1,0 +1,25 @@
+name: Compile Sketch
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  compile-sketch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # See: https://github.com/arduino/compile-sketches#readme
+      - name: Compile sketches
+        uses: arduino/compile-sketches@v1
+        with:
+          fqbn: arduino:mbed:nano33ble
+          sketch-paths: |
+            - "TinyDX FIRMWARE/TinyDX_V1.4"
+          libraries: |
+            - name: Arduino_TensorFlowLite
+            - name: Arduino_APDS9960
+            - name: Arduino_LSM9DS1
