@@ -20,6 +20,4 @@ jobs:
           sketch-paths: |
             - "TinyDX FIRMWARE/TinyDX_V1.4"
           libraries: |
-            - name: Arduino_TensorFlowLite
-            - name: Arduino_APDS9960
-            - name: Arduino_LSM9DS1
+            - name: Etherkit Si5351
