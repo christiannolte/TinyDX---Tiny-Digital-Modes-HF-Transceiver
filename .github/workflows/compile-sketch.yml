@@ -16,7 +16,7 @@ jobs:
       - name: Compile sketches
         uses: arduino/compile-sketches@v1
         with:
-          fqbn: arduino:mbed:nano33ble
+          fqbn: arduino:avr:uno
           sketch-paths: |
             - "TinyDX FIRMWARE/TinyDX_V1.4"
           libraries: |
