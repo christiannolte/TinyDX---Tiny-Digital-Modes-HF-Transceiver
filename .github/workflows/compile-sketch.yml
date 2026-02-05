@@ -13,9 +13,8 @@ jobs:
         with:
           library-manager: update
           compliance: strict
-          fqbn: arduino:avr:uno
-          sketch-paths: |
-            - "TinyDX FIRMWARE/TinyDX_V1.4"
+          recursice: true
+          project-type: sketch
 
   compile-sketch:
     runs-on: ubuntu-latest
