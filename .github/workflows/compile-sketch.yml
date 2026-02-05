@@ -15,7 +15,7 @@ jobs:
           compliance: strict
           recursice: true
           project-type: sketch
-          path: ./"TinyDX FIRMWARE"/TinyDX_V1.4
+          path: "TinyDX FIRMWARE/TinyDX_V1.4"
 
   compile-sketch:
     runs-on: ubuntu-latest
