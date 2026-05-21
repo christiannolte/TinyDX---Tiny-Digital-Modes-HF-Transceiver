@@ -81,12 +81,12 @@ IFTX: https://apps.apple.com/us/app/iftx/id6446093115
 
 ---
 
-## FT8TW (Android)
+## FT8TW / TrailDigi (Android)
 
-<!-- TODO: photo — FT8TW audio settings showing TinyDX selected -->
+<!-- TODO: photo — FT8TW or TrailDigi audio settings showing TinyDX selected -->
 
 1. Connect TinyDX to your Android phone or tablet using a USB OTG adapter.
-2. Open FT8TW.
+2. Open FT8TW or TrailDigi.
 3. Go to **Settings → Audio**.
 4. Select **USB Audio Device** (TinyDX) as the audio input and output.
 5. Set band and mode in the app to match your TinyDX switch positions.
@@ -95,8 +95,11 @@ IFTX: https://apps.apple.com/us/app/iftx/id6446093115
 > OS version. If TinyDX is not detected, try a different OTG adapter or USB cable.
 > TinyDX is USB class-compliant and does not require a driver.
 
+**TrailDigi** is a SOTA/POTA-optimised fork of FT8TW with an updated UI and
+portable-operation improvements. It is fully compatible with TinyDX and available
+at: https://codeberg.org/traildigi/traildigi
+
 <!-- TODO: verify — confirm USB audio detection behaviour on Android 13+ and Android 16 -->
-<!-- TODO: verify — confirm exact menu path in FT8TW for audio device selection -->
 
 ---
 
@@ -107,7 +110,7 @@ USB power management limits. This means it can be powered directly from a phone 
 tablet's USB port, with no separate battery or power supply required.
 
 For SOTA and POTA activations:
-- A modern smartphone with USB OTG and FT8TW provides a complete self-contained station
+- A modern smartphone with USB OTG and FT8TW or TrailDigi provides a complete self-contained station
 - A 10,000 mAh USB power bank runs TinyDX for many hours on RX; TX duty cycle is
   low in FT8 (typically 50% or less during a QSO)
 - Keep the USB cable short to minimise RF noise pickup from the data lines
