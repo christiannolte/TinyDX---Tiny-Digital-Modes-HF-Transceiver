@@ -70,6 +70,8 @@ unsigned long B2_FT4;
 uint32_t ReferenceFrequency = 26000000; //TCXO Frequency used as a reference for the Si5351PLL
 
 // **********************************[ DEFINE's ]***********************************************
+
+#define FSK_DEFAULT 2
 #define BAND1 20 // Change to your preferred band 20m/17m/15/m12m/10m
 #define BAND2 10 // Change to your preferred band 20m/17m/15/m12m/10m
 #define TX 13 //TX LED
@@ -157,7 +159,7 @@ if (freqdiv < 11 || freqdiv > 30){
   //(Using 3 cycles for timer sampling to improve the precision of frequency measurements)
   //(Against overflow in low frequency measurements)
   
-  int FSK = 1;
+  int FSK = FSK_DEFAULT;
   int FSKtx = 0;
 
   while (FSK>0){
@@ -262,6 +264,7 @@ if (freqdiv < 11 || freqdiv > 30){
       si5351.set_freq((freq * 100 + codefreq), SI5351_CLK0);    
         
       FSKtx = 1;
+      FSK = FSK_DEFAULT;
     }
     else{
       FSK--;
