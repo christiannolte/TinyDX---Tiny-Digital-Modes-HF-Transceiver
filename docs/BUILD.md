@@ -220,11 +220,10 @@ Thread M3 bolts through the corner holes, fit 6 mm spacers between each board,
 and secure with nuts.
 
 The mat, where the images have been taken has a 10mm x 10mm grid.
-
+The boards are 60mm by 25mm.
 ![Boards from top to Bottom](pcb_images/BOARDS_IN_ORDER.JPG)
 ![Set vs build](pcb_images/parts_vs_build.JPG)
 <!-- TODO: photo — assembled unit from the side showing spacers -->
-The boards are 60mm by 25mm.
 
 ---
 
