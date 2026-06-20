@@ -146,6 +146,9 @@ Fit the 6-pin 2.54 mm header to the FTDI pads on the Main board. The FTDI header
 is used for all firmware uploads after the initial bootloader has been programmed.
 
 <!-- TODO: photo — Main board with FTDI header fitted, showing pin orientation -->
+Here it depends on the FTDI adapter. If the pin allignment is not fitting,
+you maybe need to crimp some wires for this.
+![This adapter fits](pcb_images/MAIN_FTDI.JPG)
 <!-- TODO: verify — confirm pin 1 orientation from the silkscreen -->
 
 ### 3.2 TX Board — Mini-Circuits transformer and SMA connector
