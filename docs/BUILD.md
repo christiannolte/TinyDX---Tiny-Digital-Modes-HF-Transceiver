@@ -154,7 +154,7 @@ The Mini-Circuits T2-613-KK81+ transformer is the RF coupling transformer betwee
 the 74ACT244 power amplifier and the low-pass filter. It is a manufactured bifilar
 transformer connected as an auto-transformer.
 
-<!-- TODO: photo — TX board showing transformer and SMA connector locations -->
+![assembled TX commponend side](pcb_images/TX_T.JPG)
 <!-- TODO: verify — confirm transformer orientation (pin 1) from silkscreen or schematic -->
 
 Fit and solder the SMA antenna connector to the antenna edge of the TX board.
