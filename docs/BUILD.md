@@ -158,7 +158,8 @@ transformer connected as an auto-transformer.
 
 Fit and solder the SMA antenna connector to the antenna edge of the TX board.
 
-<!-- TODO: photo — completed TX board with transformer and SMA soldered -->
+The following image is showing how the transformer and the SMA connector need to be placed.
+![still not soldered, but placed](pcb_images/TRANSFORMER_SMA.JPG)
 
 ---
 
