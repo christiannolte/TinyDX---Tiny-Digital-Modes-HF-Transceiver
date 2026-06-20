@@ -62,7 +62,7 @@ Stack order (top to bottom):
 
 ### Hardware (fasteners)
 
-- 4 × M3 spacers, 6 mm length
+- 8 × M3 spacers, 6 mm length
 - 4 × M3 bolts
 - 4 × M3 nuts
 
