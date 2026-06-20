@@ -69,7 +69,7 @@ Stack order (top to bottom):
 <!-- TODO: verify — confirm spacer length and bolt/nut size from a completed build -->
 
 I I added a heatsink to the 74ACT244 thats why I replaced two of the spacers by 10mm versions.
-![detailed sideview](pcb_images/PCB_STACK1.JPG)
+![detailed sideview](pcb_images/PCB_STACK2.JPG)
 
 ### Through-hole Components to Source Separately
 
