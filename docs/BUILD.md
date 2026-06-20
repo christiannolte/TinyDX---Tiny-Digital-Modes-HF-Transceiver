@@ -45,6 +45,7 @@ Stack order (top to bottom):
 ```
 
 <!-- TODO: photo — assembled stack from the side showing all five layers -->
+![Picture of the 5 PCB Stack](pcb_images/PCB_STACK1.JPG)
 
 ---
 
