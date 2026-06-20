@@ -118,7 +118,6 @@ Each SMD board requires three files uploaded to JLCPCB:
 Upload `TinyDX Fabrication Files/GERBER TINY DX COVER.zip` as a standard PCB order
 (no SMT assembly). Order two copies — one for the top and one for the bottom.
 
-<!-- TODO: verify — confirm whether two covers are identical or mirrored -->
 
 ---
 
