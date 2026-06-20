@@ -220,7 +220,8 @@ Stack the boards and cover plates in order (top to bottom):
 Thread M3 bolts through the corner holes, fit 6 mm spacers between each board,
 and secure with nuts.
 
-<!-- TODO: photo — boards in order before stacking, showing connector alignment -->
+![Boards from top to Bottom](pcb_images/BOARDS_IN_ORDER.JPG)
+![Set vs build](pcb_images/parts_vs_build.JPG)
 <!-- TODO: photo — assembled unit from the side showing spacers -->
 <!-- TODO: photo — completed TinyDX next to a coin for size reference (as in the blog article) -->
 <!-- TODO: verify — confirm spacer count and placement (inner spacers between boards, or only at corners?) -->
